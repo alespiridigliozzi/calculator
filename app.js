@@ -70,7 +70,7 @@ const getValues = () => {
 getValues();
 
 
-// reset button will clear the display from the inputs and reset the variables to undefined;
+// When user click on the reset button, it will clear the display from the inputs and reset the variables to undefined;
 
 const clearAll = () => {
     const reset = document.getElementById('reset').addEventListener('click', () => {
