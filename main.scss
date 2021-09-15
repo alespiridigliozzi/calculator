@@ -1,54 +1,75 @@
+@use "./scss/mixins" as *;
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-$tablet-width: 768px;
-$desktop-width: 1024px;
-
-@mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
-    @content;
-  }
-}
-
-html, body {
-    background: linear-gradient(145deg, rgba(31,25,131,1) 0%, rgba(54,54,181,1) 49%, rgba(0,212,255,1) 100%);
-    color: white;
-    height: 100vh;
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Space Mono', monospace;
 
     @include tablet {
         font-size: 24px;
     }
+    @include desktop {
+        font-size: 28px;
+    }
+}
+
+body {
+    background-color: #8BC6EC;
+    // background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    background-image: url('./bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+
+    h1 {
+        text-align: center;
+        margin: 50px auto;
+    }
 }
 
 .calculator {
-    // background: rgba( 255, 255, 255, 0.1 );
+    background: rgba(255, 255, 255, 0.212);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    // backdrop-filter: blur( 9.5px );
-    // -webkit-backdrop-filter: blur( 9.5px );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 10px;
     padding: 20px;
-    margin: 50px auto;
-    height: 80%;
     width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); /* for IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* for Safari */
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 
+    @include tablet {
+        width: 70%;
+    }
+
+    @include desktop {
+        max-width: 40%;
+        max-height: 70%;
+    }
+
     #display {
-        background: rgba( 255, 255, 255, 0.1 );
+        background: rgba(255, 255, 255, 0.034);
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 9.5px );
-        -webkit-backdrop-filter: blur( 9.5px );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
         border-radius: 10px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
         width: 100%;
@@ -61,21 +82,38 @@ html, body {
     }
 
     .button {
-        background: rgba( 255, 255, 255, 0.1 );
+        background: rgba(255, 255, 255, 0.123);
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 9.5px );
-        -webkit-backdrop-filter: blur( 9.5px );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
         border-radius: 10px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
         border-radius: 10px;
         padding: 10px;
         color: white;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.26);
+            cursor: pointer;
+        }
     }
 
     .operator {
-        color: rgb(96, 236, 190);
+        color: rgb(49, 47, 214);
         font-weight: bold;
-        font-size: 22px;
+        font-size: 30px;
+    }
+
+    .display-operator {
+        padding: 0 10px;
+        color: white;
+    }
+
+    .finalresult {
+        color: rgb(49, 47, 214);
+        padding-left: 10px;
     }
 
     .equal {

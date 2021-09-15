@@ -34,7 +34,7 @@ const getValues = () => {
                 if (typeof operator === 'undefined') {
                     isNumber1Filled = false;
                     operator = operatorBtn.value;
-                    display.innerHTML += `  <b>${operatorBtn.value}</b>  `;
+                    display.innerHTML += `<span class="display-operator">${operatorBtn.value}</span>`;
                      // Making isFillingNumber1 false so as to enter in number2
                     console.log(operator);
                 }
@@ -54,19 +54,19 @@ const getValues = () => {
             if (typeof number1 !== 'undefined' && typeof number2 !== 'undefined' && operator.includes('+')) {
                     console.log(+number1 + +number2)
                     let result = +number1 + +number2;
-                    display.innerHTML += ` = ${result} `;
+                    display.innerHTML += ` =  <span class="finalresult">${result}</span> `;
                     return result;
             } else if (typeof number1 !== 'undefined' && typeof number2 !== 'undefined' && operator.includes('-')) {
                     console.log(+number1 - +number2)
-                    let result = parseInt(number1 - number2);
-                    display.innerHTML += ` = ${result} `;
+                    let result = +number1 - +number2;
+                    display.innerHTML += ` =  <span class="finalresult">${result}</span> `;
             } else if (typeof number1 !== 'undefined' && typeof number2 !== 'undefined' && operator.includes('x')) {
                     console.log(+number1 * +number2)
                     let result = +number1 * +number2;
-                    display.innerHTML += ` = ${result} `;
+                    display.innerHTML += ` =  <span class="finalresult">${result}</span> `;
             } else if (typeof number1 !== 'undefined' && typeof number2 !== 'undefined' && operator.includes('÷')) {
                     let result = +number1 / +number2;
-                    display.innerHTML += ` = ${result} `;
+                    display.innerHTML += ` =  <span class="finalresult">${result}</span> `;
                     console.log(+number1 / +number2)
             }
         })
