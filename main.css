@@ -3,39 +3,74 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  background: linear-gradient(145deg, #1f1983 0%, #3636b5 49%, #00d4ff 100%);
-  color: white;
-  height: 100vh;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Space Mono", monospace;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  html, body {
+  * {
     font-size: 24px;
   }
 }
+@media (min-width: 1024px) {
+  * {
+    font-size: 28px;
+  }
+}
+
+body {
+  background-color: #8BC6EC;
+  background-image: url("./bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 100vh;
+}
+body h1 {
+  text-align: center;
+  margin: 50px auto;
+}
 
 .calculator {
+  background: rgba(255, 255, 255, 0.212);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
   padding: 20px;
-  margin: 50px auto;
-  height: 80%;
   width: 90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  /* for IE 9 */
+  -webkit-transform: translate(-50%, -50%);
+  /* for Safari */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .calculator {
+    width: 70%;
+  }
+}
+@media (min-width: 1024px) {
+  .calculator {
+    max-width: 40%;
+    max-height: 70%;
+  }
+}
 .calculator #display {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.034);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(9.5px);
-  -webkit-backdrop-filter: blur(9.5px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   width: 100%;
@@ -47,20 +82,34 @@ html, body {
   align-items: center;
 }
 .calculator .button {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.123);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(9.5px);
-  -webkit-backdrop-filter: blur(9.5px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
   padding: 10px;
   color: white;
 }
+.calculator .button:hover {
+  background: rgba(255, 255, 255, 0.26);
+  cursor: pointer;
+}
 .calculator .operator {
-  color: #60ecbe;
+  color: #312fd6;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 30px;
+}
+.calculator .display-operator {
+  padding: 0 10px;
+  color: white;
+}
+.calculator .finalresult {
+  color: #312fd6;
+  padding-left: 10px;
 }
 .calculator .equal {
   grid-column: 4/5;
