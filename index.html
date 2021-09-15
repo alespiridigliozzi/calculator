@@ -6,24 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Calculator</title>
     <link rel="stylesheet" href="./main.css">
+    <script src="https://kit.fontawesome.com/33d4318663.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    
+  <main>
     <h1>JAVASCRIPT CALCULATOR</h1>
-    <main class="calculator">
-
+    
+    <div class="calculator">
       <div id="display"></div>
 
       <button class="button operator" value="+">+</button>
       <button class="button operator" value="-">-</button>
-      <button class="button operator" value="x">x</button>
+      <button class="button operator" value="x">×</button>
       <button class="button operator" value="÷">÷</button>
 
       <button class="button number" value="7">7</button>
       <button class="button number" value="8">8</button>
       <button class="button number" value="9">9</button>
+      <button class="button operator" value="*">x<sup>y</sup></button>
       <button class="button number" value="4">4</button>
       <button class="button number" value="5">5</button>
       <button class="button number" value="6">6</button>
+      <button class="button delete" value="delete"><i class="fas fa-backspace"></i></button>
       <button class="button number" value="1">1</button>
       <button class="button number" value="2">2</button>
       <button class="button number" value="3">3</button>
@@ -34,9 +39,8 @@
       <button type="reset" class="button" id="reset">C</button>
 
       <button class="button equal" value="=">=</button>
-
-    </main>
-<div class="circle"></div>
+    </div>
+  </main>
 
 <script src="app.js"></script>
 </body>

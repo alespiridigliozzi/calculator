@@ -12,44 +12,44 @@
     @include tablet {
         font-size: 24px;
     }
-    @include desktop {
-        font-size: 28px;
-    }
 }
 
-body {
+html, body {
     background-color: #8BC6EC;
     // background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
     background-image: url('./bg1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position:center;
     color: white;
-    height: 100vh;
+    min-height: 100vh;
+}
 
-    h1 {
-        text-align: center;
-        margin: 50px auto;
-    }
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    background: none;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px auto;
+    background: none;
 }
 
 .calculator {
-    background: rgba(255, 255, 255, 0.212);
+    background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
+    backdrop-filter: blur( 10px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    border-radius: 10px;
     padding: 20px;
     width: 90%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%); /* for IE 9 */
-    -webkit-transform: translate(-50%, -50%); /* for Safari */
-
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
@@ -68,17 +68,13 @@ body {
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
         backdrop-filter: blur( 4px );
         -webkit-backdrop-filter: blur( 4px );
-        border-radius: 10px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
         border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
         width: 100%;
-        height: 10vh;
-        border-radius: 10px;
+        min-height: 10vh;
         grid-column: 1 / -1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
+        padding: 20px;
     }
 
     .button {
@@ -88,9 +84,6 @@ body {
         -webkit-backdrop-filter: blur( 4px );
         border-radius: 10px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
-        border-radius: 10px;
         padding: 10px;
         color: white;
 
@@ -101,9 +94,13 @@ body {
     }
 
     .operator {
-        color: rgb(49, 47, 214);
-        font-weight: bold;
-        font-size: 30px;
+        color: rgb(122, 38, 255);
+        font-weight: 600;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        sup {
+            font-size: 12px;
+        }
     }
 
     .display-operator {
@@ -112,12 +109,14 @@ body {
     }
 
     .finalresult {
-        color: rgb(49, 47, 214);
+        color: rgb(122, 38, 255);
         padding-left: 10px;
     }
 
     .equal {
         grid-column: 4 / 5;
-        grid-row: 3 / 7;
+        grid-row: 5 / 7;
+        font-weight: bolder;
+        font-size: 28px;
     }
 }
