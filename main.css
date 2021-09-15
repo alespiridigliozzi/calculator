@@ -1,26 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 18px;
 }
 
-body {
-  background-color: #2c68c8;
+html, body {
+  background: linear-gradient(145deg, #1f1983 0%, #3636b5 49%, #00d4ff 100%);
   color: white;
+  height: 100vh;
+  font-size: 18px;
+  font-family: "Space Mono", monospace;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  html, body {
+    font-size: 24px;
+  }
 }
 
 .calculator {
-  background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(9.5px);
-  -webkit-backdrop-filter: blur(9.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
   padding: 20px;
   margin: 50px auto;
-  height: 70vh;
+  height: 80%;
   width: 90%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -51,6 +56,11 @@ body {
   border-radius: 10px;
   padding: 10px;
   color: white;
+}
+.calculator .operator {
+  color: #60ecbe;
+  font-weight: bold;
+  font-size: 22px;
 }
 .calculator .equal {
   grid-column: 4/5;

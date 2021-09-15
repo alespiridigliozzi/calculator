@@ -16,11 +16,11 @@ const getValues = () => {
         number.addEventListener('click', () => {
             if (isNumber1Filled) { // Note the modified if/else conditions
                 number1.push(number.value)
-                display.innerHTML += ` ${number.value}  `;
+                display.innerHTML += `${number.value}`;
                 console.log(number1);
             } else {
                 number2.push(number.value) // pushing value in number2 as well
-                display.innerHTML += ` ${number.value}  `;
+                display.innerHTML += `${number.value}`;
                 console.log(number2)
             }
         })
@@ -32,9 +32,10 @@ const getValues = () => {
         operatorValue.forEach(operatorBtn => {
             operatorBtn.addEventListener('click', () => {
                 if (typeof operator === 'undefined') {
+                    isNumber1Filled = false;
                     operator = operatorBtn.value;
                     display.innerHTML += `  <b>${operatorBtn.value}</b>  `;
-                    isNumber1Filled = false; // Making isFillingNumber1 false so as to enter in number2
+                     // Making isFillingNumber1 false so as to enter in number2
                     console.log(operator);
                 }
             })
@@ -47,8 +48,9 @@ const getValues = () => {
         const equal = document.querySelector('.equal')
 
         equal.addEventListener('click', () => {
-            number1 = number1.join(""); // Joining the array to make a string.
+            number1 = number1.join("");// Joining the array to make a string.
             number2 = number2.join("");
+
             if (typeof number1 !== 'undefined' && typeof number2 !== 'undefined' && operator.includes('+')) {
                     console.log(+number1 + +number2)
                     let result = +number1 + +number2;
@@ -56,13 +58,13 @@ const getValues = () => {
                     return result;
             } else if (typeof number1 !== 'undefined' && typeof number2 !== 'undefined' && operator.includes('-')) {
                     console.log(+number1 - +number2)
-                    let result = +number1 - +number2;
+                    let result = parseInt(number1 - number2);
                     display.innerHTML += ` = ${result} `;
             } else if (typeof number1 !== 'undefined' && typeof number2 !== 'undefined' && operator.includes('x')) {
                     console.log(+number1 * +number2)
                     let result = +number1 * +number2;
                     display.innerHTML += ` = ${result} `;
-            } else if (typeof number1 !== 'undefined' && typeof number2 !== 'undefined' && operator.includes('/')) {
+            } else if (typeof number1 !== 'undefined' && typeof number2 !== 'undefined' && operator.includes('÷')) {
                     let result = +number1 / +number2;
                     display.innerHTML += ` = ${result} `;
                     console.log(+number1 / +number2)
@@ -81,6 +83,7 @@ const clearAll = () => {
     const reset = document.getElementById('reset').addEventListener('click', () => {
         number1 = [];
         number2 = [];
+        isNumber1Filled = true;
         operator = undefined;
         display.innerHTML = "";
     })
