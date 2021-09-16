@@ -1,0 +1,46 @@
+@use "./scss/abstracts/mixins" as *;
+@use "./scss/abstracts/variables" as *;
+
+.button {
+    background: rgba(255, 255, 255, 0.123);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 10px;
+    font-size: 20px;
+    color: $text-color;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.26);
+        cursor: pointer;
+    }
+}
+
+.operator {
+    color: $primary-color;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    sup {
+        font-size: 12px;
+    }
+}
+
+.display-operator {
+    padding: 0 10px;
+    color: $text-color;
+}
+
+.finalresult {
+    color: $primary-color;
+    padding-left: 10px;
+}
+
+.equal {
+    grid-column: 4 / 5;
+    grid-row: 5 / 7;
+    font-weight: bolder;
+    font-size: 28px;
+}

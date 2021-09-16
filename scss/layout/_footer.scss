@@ -1,0 +1,16 @@
+@use "./scss/abstracts/mixins" as *;
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+
+    @include tablet {
+        width: 60%;
+        margin: 0 auto;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,17 @@
+@use "./scss/abstracts/mixins" as *;
+@use "./scss/abstracts/variables" as *;
+
+a, a:visited, a:active {
+    color: $primary-color;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $secondary-color;
+}
+
+h1 {
+    text-align: center;
+    margin: 5vh auto;
+    font-size: 28px;
+}

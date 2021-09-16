@@ -1,5 +1,10 @@
-$tablet-width: 768px;
-$desktop-width: 1024px;
+@use "./variables" as *;
+
+@mixin small-phones {
+  @media (max-width: #{$small-viewport-width}) {
+    @content;
+  }
+}
 
 @mixin tablet {
   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
