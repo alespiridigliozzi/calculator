@@ -1,0 +1,52 @@
+@use "./scss/abstracts/mixins" as *;
+@use "./scss/abstracts/variables" as *;
+
+
+main {
+    padding: 5vh;
+
+    @include small-phones {
+        padding: 10px;
+    }
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.171);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    @include tablet {
+        width: 60%;
+    }
+
+    @include desktop {
+        max-width: 30%;
+        max-height: 80%;
+    }
+
+    #display {
+        background: rgba(255, 255, 255, 0.034);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        border-radius: 10px;
+        width: 100%;
+        min-height: 70px;
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+    }
+}    

@@ -1,122 +1,29 @@
-@use "./scss/mixins" as *;
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@use "./scss/abstracts/mixins" as *;
+@use "./scss/abstracts/variables" as *;
 
+@use "./scss/base/typography";
+
+@use "./scss/components/buttons";
+
+@use "./scss/layout/calculator";
+@use "./scss/layout/footer";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 20px;
-    font-family: 'Space Mono', monospace;
-
-    @include tablet {
-        font-size: 24px;
-    }
 }
 
 html, body {
-    background-color: #8BC6EC;
-    // background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-    background-image: url('./bg1.jpg');
+    background-color: $bg-color;
+    background-image: url('./background.jpg');
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position:center;
-    color: white;
-    min-height: 100vh;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
-    background: none;
-}
-
-h1 {
-    text-align: center;
-    margin: 20px auto;
-    background: none;
-}
-
-.calculator {
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 10px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    padding: 20px;
-    width: 90%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-
-    @include tablet {
-        width: 70%;
-    }
-
-    @include desktop {
-        max-width: 40%;
-        max-height: 70%;
-    }
-
-    #display {
-        background: rgba(255, 255, 255, 0.034);
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
-        border-radius: 10px;
-        width: 100%;
-        min-height: 10vh;
-        grid-column: 1 / -1;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .button {
-        background: rgba(255, 255, 255, 0.123);
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
-        padding: 10px;
-        color: white;
-
-        &:hover {
-            background: rgba(255, 255, 255, 0.26);
-            cursor: pointer;
-        }
-    }
-
-    .operator {
-        color: rgb(122, 38, 255);
-        font-weight: 600;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-        sup {
-            font-size: 12px;
-        }
-    }
-
-    .display-operator {
-        padding: 0 10px;
-        color: white;
-    }
-
-    .finalresult {
-        color: rgb(122, 38, 255);
-        padding-left: 10px;
-    }
-
-    .equal {
-        grid-column: 4 / 5;
-        grid-row: 5 / 7;
-        font-weight: bolder;
-        font-size: 28px;
-    }
+    background-position: center;
+    color: $text-color;
+    font-size: 20px;
+    font-family: $main-font;
 }
