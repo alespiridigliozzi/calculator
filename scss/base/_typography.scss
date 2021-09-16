@@ -2,12 +2,12 @@
 @use "./scss/abstracts/variables" as *;
 
 a, a:visited, a:active {
-    color: $primary-color;
+    color: $secondary-color;
     text-decoration: none;
 }
 
 a:hover {
-    color: $secondary-color;
+    color: $primary-color;
 }
 
 h1 {
