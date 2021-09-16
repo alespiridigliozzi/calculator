@@ -1,5 +1,7 @@
 # JavaScript Calculator :iphone:
 
+![js-calculator](https://github.com/alexsp92/calculator/blob/main/js-calculator.png)
+
 ## The Design :large_blue_diamond:
 The Calculator was designed with a **mobile-first approach**, using a _css-grid_ layout and styled using the _Glass Morphism_ design trend.
 
