@@ -3,10 +3,10 @@
 
 
 main {
-    padding: 5vh;
+    padding: 1.5vh;
 
-    @include small-phones {
-        padding: 10px;
+    @include desktop {
+        padding: 5vh;
     }
 }
 
@@ -48,5 +48,15 @@ main {
         align-items: center;
         text-align: center;
         font-size: 20px;
+
+        .display-operator {
+            padding: 0 10px;
+            color: $text-color;
+        }
+        
+        .final-result {
+            color: $primary-color;
+            padding-left: 10px;
+        }
     }
 }    
