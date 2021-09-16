@@ -14,7 +14,7 @@ The calculator consists of:
     - _Dot (.) button_ to allow user to use decimal units
     - _C_ button to activate the function All Clear and allow user to reset the calculator
 
-## The Code
+## The Code :white_square_button:
 The values of the users' inputs (when they click on a button for each single digit) will be stored in two variables with empty arrays.
 `let number1 = [];` and `let number2 = [];`
 
