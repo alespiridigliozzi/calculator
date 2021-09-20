@@ -38,7 +38,6 @@ To delete values, we simply reverse the logic used to originally get the values.
             case operandCheck && operator.includes('+'):
                  result = +firstOperand + +secondOperand;
                  display.innerHTML += ` =  <span class="final-result">${result}</span> `;
-                 console.log(result);
                  break;
             case operandCheck && operator.includes('-'):
                  result = +firstOperand - +secondOperand;
