@@ -70,7 +70,6 @@ const calculation = () => {
             case operandCheck && operator.includes('+'):
                  result = +firstOperand + +secondOperand;
                  display.innerHTML += ` =  <span class="final-result">${result}</span> `;
-                 console.log(result);
                  break;
             case operandCheck && operator.includes('-'):
                  result = +firstOperand - +secondOperand;
