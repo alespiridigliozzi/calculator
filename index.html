@@ -14,32 +14,32 @@
     <h1>JAVASCRIPT CALCULATOR</h1>
     
     <div class="calculator">
-      <div id="display"></div>
+      <div id="display" data-cy="display"></div>
 
-      <button class="button operator" value="+">+</button>
-      <button class="button operator" value="-">—</button>
-      <button class="button operator" value="x">×</button>
-      <button class="button operator" value="÷">÷</button>
+      <button class="button operator" value="+" data-cy="plus">+</button>
+      <button class="button operator" value="-" data-cy="minus">—</button>
+      <button class="button operator" value="x" data-cy="multiply">×</button>
+      <button class="button operator" value="÷" data-cy="divide">÷</button>
 
-      <button class="button operator" value="%">%</button>
-      <button class="button operator" value="*">x<sup>y</sup></button>
-      <button class="button operator" value="√">√</button>
+      <button class="button operator" value="%" data-cy="percentage">%</button>
+      <button class="button operator" value="*" data-cy="power-of">x<sup>y</sup></button>
+      <button class="button operator" value="√" data-cy="square-root">√</button>
       <button class="button delete" value="delete"><i class="fas fa-backspace"></i></button>
 
-      <button class="button number" value="7">7</button>
-      <button class="button number" value="8">8</button>
+      <button class="button number" value="7" data-cy="seven">7</button>
+      <button class="button number" value="8" data-cy="eight">8</button>
       <button class="button number" value="9">9</button>
       <button class="button number" value="4">4</button>
       <button class="button number" value="5">5</button>
       <button class="button number" value="6">6</button>
-      <button class="button number" value="1">1</button>
-      <button class="button number" value="2">2</button>
+      <button class="button number" value="1" data-cy="one">1</button>
+      <button class="button number" value="2" data-cy="two">2</button>
       <button class="button number" value="3">3</button>
       <button class="button number" value="0">0</button>
 
       <button class="button number point" value=".">.</button>
-      <button class="button equal" value="=">=</button>
-      <button type="reset" class="button" id="reset">C</button>
+      <button class="button equal" value="=" data-cy="equals">=</button>
+      <button type="reset" class="button" id="reset" data-cy="reset">C</button>
 
     </div>
   </main>
