@@ -34,13 +34,16 @@ To delete values, we simply reverse the logic used to originally get the values.
 
 ### Calculation
 `switch` cases will evaluate different scenarios and based on that, different mathematical operations will be performed:
-```switch (operandCheck) {
-            case operandCheck && operator.includes('+'):
-                 result = +firstOperand + +secondOperand;
-                 display.innerHTML += ` =  <span class="final-result">${result}</span> `;
-                 break;
-            case operandCheck && operator.includes('-'):
-                 result = +firstOperand - +secondOperand;
-                 display.innerHTML += ` =  <span class="final-result">${result}</span> `;
-                 break;
-            [...]
+```javascript
+switch (operandCheck) {
+       case operandCheck && operator.includes('+'):
+            result = +firstOperand + +secondOperand;
+            display.innerHTML += ` =  <span class="final-result">${result}</span> `;
+            break;
+       case operandCheck && operator.includes('-'):
+            result = +firstOperand - +secondOperand;
+            display.innerHTML += ` =  <span class="final-result">${result}</span> `;
+            break;
+       [...]
+}
+```
