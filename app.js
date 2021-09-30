@@ -69,33 +69,27 @@ const calculation = () => {
         switch (operandCheck) {
             case operandCheck && operator.includes('+'):
                  result = +firstOperand + +secondOperand;
-                 display.innerHTML += ` =  <span class="final-result">${result}</span> `;
                  break;
             case operandCheck && operator.includes('-'):
                  result = +firstOperand - +secondOperand;
-                 display.innerHTML += ` =  <span class="final-result">${result}</span> `;
                  break;
             case operandCheck && operator.includes('x'):
                  result = +firstOperand * +secondOperand;
-                 display.innerHTML += ` =  <span class="final-result">${result}</span> `;
                  break;
             case operandCheck && operator.includes('÷'):
                  result = +firstOperand / +secondOperand;
-                 display.innerHTML += ` =  <span class="final-result">${result}</span> `;
                  break;
             case operandCheck && operator.includes('*'):
                  result = Math.pow(+firstOperand, +secondOperand)
-                 display.innerHTML += ` =  <span class="final-result">${result}</span> `;
                  break;
             case operandCheck && operator.includes('%'):
                  result = +firstOperand / 100 * +secondOperand;
-                 display.innerHTML += ` =  <span class="final-result">${result}</span> `;
                  break;
             case operandCheck && operator.includes('√'):
                  result = Math.sqrt(+firstOperand);
-                 display.innerHTML += ` =  <span class="final-result">${result}</span> `;
                  break;
         }
+            display.innerHTML += ` =  <span class="final-result">${result}</span> `; 
     })
 }
 calculation()
