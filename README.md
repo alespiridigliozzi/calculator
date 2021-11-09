@@ -1,4 +1,5 @@
 # JavaScript Calculator :iphone:
+[Check out the Live Demo Here](https://alessandrothedev.github.io/calculator/)
 
 ![js-calculator](https://github.com/alexsp92/calculator/blob/main/js-calculator.png)
 
